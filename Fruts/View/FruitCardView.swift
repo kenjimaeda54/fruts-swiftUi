@@ -10,28 +10,28 @@ import SwiftUI
 struct FruitCardView: View {
 	//MARK: - Properties
 	@State private var isAnimation = false
-	
+	var fruit: FruitModel
 	
 	var body: some View {
 		ZStack {
 			VStack(spacing: 20) {
-				Image("blueberry")
+				Image(fruit.image)
 					.resizable()
 					.scaledToFit()
 					.shadow(color: Color(red: 0, green: 0, blue: 0,opacity: 0.15),radius: 8,x:6,y:8)
 					.scaleEffect(isAnimation ? 1 : 0.6)//a imgem vai comecar pequena ate atingir o seu tamanho 
 				
-				Text("Blueberry")
+				Text(fruit.title)
 					.foregroundColor(.white)
 					.shadow(color: Color(red: 0, green: 0, blue: 0,opacity: 0.15),radius: 2,x: 2,y: 2)
 					.font(.largeTitle)
 				
-				Text("Blueberries are sweet, nutritious and wildly popular fruit all over the world.")
+				Text(fruit.headline)
 					.multilineTextAlignment(.center)
 					.frame(maxWidth: 480)
 					.foregroundColor(.white)
 					.padding(.horizontal, 26)
-			  StartButton()
+				StartButton()
 				
 			} // VStack
 			.onAppear(perform: {
@@ -41,7 +41,7 @@ struct FruitCardView: View {
 			})
 			.frame(minWidth: 0,maxWidth: .infinity, minHeight: 0,maxHeight: .infinity)
 			.background(
-				LinearGradient(colors: [Color("ColorBlueBerryLight"),Color("ColorBlueBerryDark")], startPoint: .leading, endPoint: .trailing)
+				LinearGradient(colors: fruit.gradientColors, startPoint: .leading, endPoint: .trailing)
 					.cornerRadius(20)
 					.padding(.horizontal,10)
 				
@@ -52,8 +52,8 @@ struct FruitCardView: View {
 
 struct FruitCardView_Previews: PreviewProvider {
 	static var previews: some View {
-		FruitCardView()
+		FruitCardView(fruit: fruitsMock[1])
 			.previewLayout(.fixed(width: 320, height: 640))
-			
+		
 	}
 }
