@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81610ED2293FEE1700770EE0 /* FruitCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81610ED1293FEE1700770EE0 /* FruitCardView.swift */; };
+		81610ED6293FF0C200770EE0 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81610ED5293FF0C200770EE0 /* StartButton.swift */; };
+		81610ED8293FF41800770EE0 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81610ED7293FF41800770EE0 /* OnboardView.swift */; };
 		81D13B86293ECFE20085D93B /* FrutsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D13B85293ECFE20085D93B /* FrutsApp.swift */; };
 		81D13B88293ECFE20085D93B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D13B87293ECFE20085D93B /* ContentView.swift */; };
 		81D13B8A293ECFE40085D93B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D13B89293ECFE40085D93B /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81610ED1293FEE1700770EE0 /* FruitCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCardView.swift; sourceTree = "<group>"; };
+		81610ED5293FF0C200770EE0 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		81610ED7293FF41800770EE0 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		81D13B82293ECFE20085D93B /* Fruts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D13B85293ECFE20085D93B /* FrutsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrutsApp.swift; sourceTree = "<group>"; };
 		81D13B87293ECFE20085D93B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81610ECF293FEDEB00770EE0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				81D13B85293ECFE20085D93B /* FrutsApp.swift */,
+				81D13B87293ECFE20085D93B /* ContentView.swift */,
+				81610ED7293FF41800770EE0 /* OnboardView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		81610ED0293FEDFC00770EE0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81610ED1293FEE1700770EE0 /* FruitCardView.swift */,
+				81610ED5293FF0C200770EE0 /* StartButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		81D13B79293ECFE20085D93B = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +76,8 @@
 		81D13B84293ECFE20085D93B /* Fruts */ = {
 			isa = PBXGroup;
 			children = (
-				81D13B85293ECFE20085D93B /* FrutsApp.swift */,
-				81D13B87293ECFE20085D93B /* ContentView.swift */,
+				81610ED0293FEDFC00770EE0 /* View */,
+				81610ECF293FEDEB00770EE0 /* App */,
 				81D13B89293ECFE40085D93B /* Assets.xcassets */,
 				81D13B8B293ECFE40085D93B /* Preview Content */,
 			);
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81610ED2293FEE1700770EE0 /* FruitCardView.swift in Sources */,
+				81610ED8293FF41800770EE0 /* OnboardView.swift in Sources */,
 				81D13B88293ECFE20085D93B /* ContentView.swift in Sources */,
+				81610ED6293FF0C200770EE0 /* StartButton.swift in Sources */,
 				81D13B86293ECFE20085D93B /* FrutsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +310,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kvm.Fruts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +333,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kvm.Fruts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
