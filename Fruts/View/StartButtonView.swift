@@ -7,23 +7,23 @@
 
 import SwiftUI
 
-struct StartButton: View {
+struct StartButtonView: View {
 	//MARK:- Properties
+	@AppStorage("onBoarding") var isBonboarding:Bool?
 	
 	//MARK: - Functions
 	func handleAction() {
-		print("ola")
+		isBonboarding = false
 	}
 	
 	var body: some View {
 		Button(action: handleAction, label: {
 			HStack(spacing: 10) {
 				Text("Start")
-					.foregroundColor(.white)
 				Image(systemName: "arrow.right.circle")
 					.imageScale(.large)
-					.foregroundColor(.white)
-			    
+				
+				
 				
 			}
 			.padding(.horizontal,10)
@@ -40,7 +40,7 @@ struct StartButton: View {
 
 struct StartButton_Previews: PreviewProvider {
 	static var previews: some View {
-		StartButton()
+		StartButtonView()
 			.previewLayout(.sizeThatFits)
 			.preferredColorScheme(.dark)
 	}
