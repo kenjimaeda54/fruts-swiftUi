@@ -10,11 +10,12 @@ import SwiftUI
 struct ContentView: View {
 	//MARK: - Properties
 	@State var isShowsettingsView = false
+	@State private var navigationButtonID = UUID()
 	var fruits = fruitsMock
 	
 	//MARK: - Functions
 	func handleToggleTolBar() {
-		isShowsettingsView = true
+		isShowsettingsView.toggle()
 	}
 	
 	var body: some View {
@@ -30,21 +31,24 @@ struct ContentView: View {
 			}
 			.navigationTitle("Fruits")
 			.toolbar {
-				Button(action: handleToggleTolBar) {
-					Image(systemName: "slider.horizontal.3")
+				ToolbarItem(placement: .navigationBarTrailing){
+					Button(action: handleToggleTolBar) {
+						Image(systemName: "slider.horizontal.3")
+					}
 				}
+
 			}
 			//			Use this method when you want to present a modal view to the user when a Boolean value you provide is true.
+			
 			.sheet(isPresented: $isShowsettingsView) {
 				SettingsView()
-				
 			}
-			
 		}//Navigation
 		.listStyle(.plain)
 		.padding(.vertical,8)
-		
-		
+		//imporatante para garantir o funcionamento corretonavigationBarTrailing
+		.edgesIgnoringSafeArea(.all)
+	  
 	}
 }
 

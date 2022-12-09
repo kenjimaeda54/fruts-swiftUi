@@ -13,9 +13,9 @@ struct FruitDetails: View {
 	
 	var body: some View {
 		//navigationView e importante para ter o botao de voltar
-		NavigationView {
+		NavigationStack {
 			ScrollView(.vertical,showsIndicators: false) {
-				VStack(alignment: .center, spacing: 20) {
+				VStack(alignment: .center) {
 					FruitHeaderView(fruit: fruit)
 					VStack(alignment: .center, spacing: 20) {
 						VStack(alignment: .leading, spacing: 20) {
@@ -51,7 +51,7 @@ struct FruitDetails: View {
 			}// ScrollView
 			.edgesIgnoringSafeArea(.top)
 		} // Navigation
-		
+
 	}
 	
 }
