@@ -1,14 +1,14 @@
 # Fruts
-Aplicativo com descricao de frutas </br>
-E possivel selecionar uma fruta da lista e verificar seus detalhes. Tambem verficar os detalhes do desenvolvedor pelo botao de configuracao
+Aplicativo contento detalhes  das frutas </br>
+E possível selecionar uma fruta da lista e verificar seus detalhes. Também os detalhes do desenvolvedor pelo botão de configuração
 
 
 ## Feature
-- Utilizei o conceito de sheet, a ideia e sobrepor uma tela sobre a outra, parecido com modal
-- Para funcionanmento correto precisei no navigationStack determinar edgesIgnoringSafeArea(.all)
-- Sem ignorar o safe area o botao para abrir o modal as vezes funcionava e outros momenots nao
+- Utilizei o conceito de sheet, a ideia e sobrepor uma, parecido com modal
+- Para funcionamento correto precisei no navigationStack determinar edgesIgnoringSafeArea(.all)
+- Sem ignorar o safe área o botão para abrir o modal às vezes funcionava e outros momentos não
 - Para o swifui entender que a tela do modal esta fechada usamos Environment com a propriedade demiss
-- E possivel fechar o modal tanto arrastando quanto por um botao de close 
+- E possível fechar o modal tanto arrastando quanto por um botão de close 
 
 
 ```swift
@@ -29,13 +29,12 @@ E possivel selecionar uma fruta da lista e verificar seus detalhes. Tambem verfi
 ##
 - Abaixo alguns recursos interessantes no momento de criar interfaces
 - Para criar outiline nos usamos o background e a propriedade strokeBorder
-- Percebi que o padding em alguns momenots pode gerar bug no momento de criar corner radius, caso decida usar a propriedade cornerRadius retire o padding e testa
+- Percebi que o padding em alguns momentos pode gerar bug no momento de criar corner radius, caso decida usar a propriedade cornerRadius retire o padding e testa
 - Com zstack podemos aplicar um linear gradiente na screen toda
-- Para criar links externos clicaveis podemos usar a prorpiedade link
-- Com disclosuregroup criamos aquelas caixinhas suspensas que ao clicar abre um conteudo interno
-- Repare que no forEach usamos uma propriedade id o motivo e que ele de um inteiro para criar gerar sequencia , erro que pode acusar e nao existe um inteiro ou constante literal
-- Para retirar os epscaos em brancos da list usamos a propriedade listStyle(.plain)
-- 
+- Para criar links externos clicáveis podemos usar a prorpiedade link
+- Com disclosuregroup criamos aquelas caixinhas suspensas que ao clicar abre um conteúdo interno
+- Repare que no forEach usamos uma propriedade, id o motivo e que  forEach precisa de   inteiro para gerar sequencia, erro que pode acusar é não existe um inteiro ou constante literal
+- Para retirar os espaços  em brancos da list usamos a propriedade listStyle(.plain)
 
 ```swift
 
