@@ -20,6 +20,8 @@ struct SettingsView: View {
 		dismiss()
 	}
 	
+	
+	
 	var body: some View {
 		NavigationView {
 			ScrollView(.vertical) {

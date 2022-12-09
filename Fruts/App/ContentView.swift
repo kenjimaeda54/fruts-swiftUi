@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
 	//MARK: - Properties
 	@State var isShowsettingsView = false
-	@State private var navigationButtonID = UUID()
 	var fruits = fruitsMock
 	
 	//MARK: - Functions
